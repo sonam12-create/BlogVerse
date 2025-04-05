@@ -28,7 +28,7 @@ const Signup = () => {
       data.append("image", formData.image);
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:4000/user/register",
+        import.meta.env.VITE_BACKENDURL + "/user/register",
         data,
         {
           headers: {
